@@ -1,0 +1,118 @@
+@import '/src/index.scss';
+.about {
+    &-span {
+     font-family: $font-family-1;
+     font-style: italic;
+     @media(max-width:780px) {
+      font-size: 2rem !important;
+    }
+
+    }
+    &-heading {
+      @media(max-width:780px) {
+        font-size: 2rem !important;
+      }
+    }
+  &-grid {
+   width: 50rem; 
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-gap: 2rem;
+   align-content: center;
+   margin-top:-5rem;
+   @media(max-width: 1110px) {
+    margin-top: 1rem;
+   }
+   @include respond(phone) {
+     width: 30rem;
+     gap: 1;
+}
+  }
+  &-skills {
+    display: inline-block;
+    @include respond(phone) {
+      font-size: 1.5rem !important;
+  }
+  &-icon {
+    @include respond(phone) {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+  }
+  &-flex {
+    @media(max-width: 1100px) {
+      display: block !important;
+    }
+  }
+  &-text-container {
+   @media(max-width: 1100px) {
+    width: 100% !important;
+   }
+  }
+  &-img-container {
+    justify-self: center !important;
+    @media(max-width: 1100px) {
+  display: none !important;
+    }
+  }
+  &-mobile-img {
+    display: none;
+    @media(max-width: 1100px) {
+      display: block !important;
+      margin: 0 auto !important;
+      margin-top: 3rem !important;
+      
+    }
+    @media(max-width: 420px) {
+      height: 30rem;
+      width: 30rem;
+    }
+  }
+  &__img-wrapper {
+   background: linear-gradient(to right,rgba(228, 146, 245, 0.3),rgba(228, 146, 245, 0.3)),url('../../assets/img/Jubril.jpeg') !important;
+   background-size: cover !important;
+   &:hover {
+    background: url('../../assets/img/Jubril.jpeg') !important;
+    background-size: cover !important;
+
+   }
+    &:hover + .absolute-container{
+      top: 1.5rem !important;
+      left: 1.5rem !important;
+      @media(max-width: 420px) {
+        top:.7rem !important ;
+        left: .7rem !important;
+      }
+    }
+  
+  img {
+    border-radius: 10px;
+  }
+  @media(max-width:420px) {
+    height: 20rem !important;
+    width: 20rem !important;
+  }
+  }
+ &-text {
+ 
+    @include respond(phone) {
+      font-size: 1.5rem !important;
+  }
+  
+ } 
+ 
+ 
+}
+.absolute-container {
+  border: 2px solid rgb(228,146,245);
+  z-index: -1 !important;
+  transition: all .2s;
+  
+  @media(max-width:420px) {
+    height: 20rem !important;
+    width: 20rem !important;
+    top: 1rem !important;
+    left: 1rem !important;
+  }
+}

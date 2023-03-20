@@ -1,0 +1,35 @@
+@import '/src/index.scss';
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 2;
+    @include respond(phone) {
+        display: none !important;
+    }
+}
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+}
+.left-details {
+    position: absolute !important;
+    bottom: 0;
+}
+.right-details {
+    position: absolute !important;
+    bottom: 0;
+    right: 0;
+}
+.footer-email {
+    transform: rotate(90deg);
+}
+.icon {
+    transition: all .2s;
+    cursor: pointer;
+    &:hover {
+        color:rgba(240, 196, 248, 0.307) !important;
+    }
+}

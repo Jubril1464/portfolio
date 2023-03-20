@@ -1,3 +1,6 @@
+$color-text: rgb(240, 196, 248);
+$font-family-1: 'Roboto Condensed', sans-serif;
+
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {
     @media (max-width: 37.5em) {
@@ -68,7 +71,10 @@ html, body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-
+ 
+  @include respond(tab-land) {
+    font-size: 58%;
+  }
   @include respond(tab-port) {
     font-size: 53%;
   }
@@ -76,6 +82,10 @@ html, body {
   @include respond(phone) {
     font-size: 50%; // 1rem = 8px, 8/16 * 100 = 50%
   }
+}
+body {
+  background-color: rgb(15, 2, 38);
+ // position: relative;
 }
   
 input,
@@ -115,4 +125,20 @@ input[type=number]::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+@keyframes moveInRight {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+  
+}
+// .container {
+//   position: relative;
+// }
+.app{
+  height: 100%;
 }

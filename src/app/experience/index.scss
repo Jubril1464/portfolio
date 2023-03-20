@@ -1,0 +1,16 @@
+@import '/src/index.scss';
+.expe {
+    &-span {
+        font-family: $font-family-1;
+        font-style: italic;
+        @media(max-width:780px) {
+         font-size: 2rem !important;
+       }
+   
+       }
+       &-heading {
+         @media(max-width:780px) {
+           font-size: 2rem !important;
+         }
+       }
+}
