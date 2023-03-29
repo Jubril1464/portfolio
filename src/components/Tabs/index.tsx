@@ -2,56 +2,69 @@ import {useState} from 'react'
 import { AppSpan, AppText, CustomContainer, FlexColumn, FlexRow } from '../../style';
 import TabContent from '../TabContent';
 import TabItem from '../TabItem';
+import {BsPlay} from 'react-icons/bs'
 import './index.scss';
 
 const Tabs = () => {
     const [activeTab, setActiveTab] = useState("tab1")
 
-    const handleTab =(tab:string) => {
-        const tabCase = tab.toLowerCase()
-        setActiveTab(tabCase)
-
-    }
+   
     return(
-        <CustomContainer topMargin='10'>
-            <FlexRow justifyContent='flex-start' gap='20' alignItems='flex-start'>
+        <CustomContainer topMargin='10' className='container'>
+            <FlexRow justifyContent='flex-start' gap='20' alignItems='flex-start' className='tabs-wrapper'>
             <FlexColumn width='10' className='tabs-container' gap='2' topPadding='2' bottomPadding='2'>
-            {/* <div className={`tabs-item-container ${activeTab === 'tab1'? 'active' : ""}`} onClick={() =>handleTab('tab1')}>
-            <AppText color="rgb(228, 146, 245)" textSize='2' fontWeight='400' className='tabs-item' >Nexahive</AppText>
-
-            </div>
-            <div className={`tabs-item-container ${activeTab === 'tab2'? 'active' : ""}`} onClick={() =>handleTab('tab2')}>
-            <AppText color="rgb(228, 146, 245)" textSize='2' fontWeight='400' className='tabs-item' >Nexahive</AppText>
-
-            </div>
-            <div className={`tabs-item-container ${activeTab === 'tab3'? 'active' : ""}`} onClick={() =>handleTab('tab3')}>
-            <AppText color="rgb(228, 146, 245)" textSize='2' fontWeight='400' className='tabs-item' >Nexahive</AppText>
-
-            </div> */}
-            <TabItem title="ApnaDevelopers" id="tab1" activeTab={activeTab} setActiveTab={setActiveTab}/>
-            <TabItem title="NewCore " id="tab2" activeTab={activeTab} setActiveTab={setActiveTab}/>
-        <TabItem title="VSprouts" id="tab3" activeTab={activeTab} setActiveTab={setActiveTab}/>
+           
+            <TabItem title="VSprouts" id="tab1" activeTab={activeTab} setActiveTab={setActiveTab}/>
+            <TabItem title="ApnaDevelopers" id="tab2" activeTab={activeTab} setActiveTab={setActiveTab}/>
+            <TabItem title="NewCore" id="tab3" activeTab={activeTab} setActiveTab={setActiveTab}/>
 
             </FlexColumn> 
             <div className="outlet">
-      <TabContent id="tab1" activeTab={activeTab}>
-          <AppText textSize='3.5' fontWeight='400' color='rgb(240,196,248)'>Frontend Developer Intern @ <AppSpan color="rgb(228, 146, 245)" textSize='3.5' fontWeight='400'>ApnaDevs</AppSpan></AppText>
-          <AppText  textSize='2'  fontWeight='400' color='rgb(240,196,248)'>October 2022 - December 2022</AppText>
-        </TabContent>
-        <TabContent id="tab2" activeTab={activeTab}>
-          <AppText>Tab 2 works!</AppText>
-        </TabContent>
-        <TabContent id="tab3" activeTab={activeTab}>
-          <AppText>Tab 3 works!</AppText>
-        </TabContent>
-   
-    
-      </div> 
+            <TabContent id="tab1" activeTab={activeTab}>
+          <AppText textSize='3.5' fontWeight='400' color='rgb(240,196,248)' className='expe-title'>Frontend Developer @ <AppSpan color="rgb(228, 146, 245)" textSize='3.5' fontWeight='400' className='expe-title span'>Virtuous Sprouts</AppSpan></AppText>
+          <AppText  textSize='2'  fontWeight='400' color='rgb(240,196,248)' className='expe-text'>Nov 2022 - Current</AppText>
+          <FlexRow justifyContent='flex-start' gap='1'>
+            <BsPlay color='rgb(228, 146, 245)' size={40} className='play-icon'/>
+              <AppText textSize='2'  fontWeight='400' color='rgb(240,196,248)'  className='expe-text'> Collaborated with teammates  in developing Virtuous Sprouts school portal.</AppText>
 
-            </FlexRow>
-           
-        
-        </CustomContainer>
+          </FlexRow>
+          <FlexRow justifyContent='flex-start' gap='1'>
+          <BsPlay color='rgb(228, 146, 245)' size={40} className='play-icon'/>
+          <AppText textSize='2'  fontWeight='400' color='rgb(240,196,248)'  className='expe-text'>Reviewed proposed UI and UX designs for technical feasibility by collaborating with back-end development personnel.</AppText>
+          </FlexRow>
+        </TabContent>
+      <TabContent id="tab2" activeTab={activeTab}>
+          <AppText textSize='3.5' fontWeight='400' color='rgb(240,196,248)' className='expe-title'>Frontend Developer Intern @ <AppSpan color="rgb(228, 146, 245)" textSize='3.5' fontWeight='400' className='expe-title span'>ApnaDevs</AppSpan></AppText>
+          <AppText  textSize='2'  fontWeight='400' color='rgb(240,196,248)'  className='expe-text'>October 2022 - December 2022</AppText>
+          <FlexRow justifyContent='flex-start' gap='1'>
+            <BsPlay color='rgb(228, 146, 245)' size={40} className='play-icon'/>
+              <AppText textSize='2'  fontWeight='400' color='rgb(240,196,248)'  className='expe-text'> I interned at ApnaDeveloper to implement Frontend technical solutions to meet projects requirements.</AppText>
+
+          </FlexRow>
+          <FlexRow justifyContent='flex-start' gap='1'>
+          <BsPlay color='rgb(228, 146, 245)' size={40} className='play-icon'/>
+          <AppText textSize='2'  fontWeight='400' color='rgb(240,196,248)'  className='expe-text'>Conducted research about new tools used in Frontend Developement.</AppText>
+
+
+          </FlexRow>
+        </TabContent>
+
+        <TabContent id="tab3" activeTab={activeTab}>
+        <AppText textSize='3.5' fontWeight='400' color='rgb(240,196,248)' className='expe-title'>Frontend Developer @ <AppSpan color="rgb(228, 146, 245)" textSize='3.5' fontWeight='400' className='expe-title span'>NewCore Technologies</AppSpan></AppText>
+          <AppText  textSize='2'  fontWeight='400' color='rgb(240,196,248)'  className='expe-text'>Feb 2021 - April 2022</AppText>
+          <FlexRow justifyContent='flex-start' gap='1'>
+            <BsPlay color='rgb(228, 146, 245)' size={40} className='play-icon'/>
+              <AppText textSize='2'  fontWeight='400' color='rgb(240,196,248)'  className='expe-text'> Collaborated with teammates to improve processes and produce better tools.</AppText>
+
+          </FlexRow>
+          <FlexRow justifyContent='flex-start' gap='1'>
+          <BsPlay color='rgb(228, 146, 245)' size={40} className='play-icon' />
+          <AppText textSize='2'  fontWeight='400' color='rgb(240,196,248)'  className='expe-text'>Continuously studied and improved abilities with wide range of web technologies, design tools and programming practices</AppText>
+          </FlexRow>
+        </TabContent>
+       </div> 
+         </FlexRow>
+       </CustomContainer>
     )
 }
 export default Tabs

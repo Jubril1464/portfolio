@@ -40,7 +40,7 @@ const About:React.FC = () => {
                     <FlexRow gap="1" justifyContent="flex-start"><BsPlay color="rgb(228, 146, 245)"size={40} className='about-skills-icon'/> <AppText className="about-skills" color="rgb(100, 255, 218)" textSize="2.5" fontWeight="400">React</AppText></FlexRow>
                     <FlexRow gap="1" justifyContent="flex-start"><BsPlay color="rgb(228, 146, 245)"size={40} className='about-skills-icon'/> <AppText className="about-skills" color="rgb(100, 255, 218)" textSize="2.5" fontWeight="400">Redux</AppText></FlexRow>
                  </div>
-                 <CustomContainer height="45" width="45"  className="about-img-container about-mobile-img">
+                 <CustomContainer height="42" width="42"  className="about-img-container about-mobile-img">
                      <AbsoluteContainer height="40" width="40" className="about__img-wrapper" radius="1"></AbsoluteContainer>
                      <AbsoluteContainer height="40" width="40" radius="1" top="2" left="2" className="absolute-container"></AbsoluteContainer>
                    </CustomContainer>

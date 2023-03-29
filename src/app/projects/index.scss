@@ -1,0 +1,25 @@
+@import '/src/index.scss';
+.projects {
+    @media(max-width: 420px) {
+        margin-top: 5rem !important;
+      }
+        &-span {
+            font-family: $font-family-1;
+            font-style: italic;
+            @media(max-width:780px) {
+             font-size: 2rem !important;
+           }
+       
+           }
+           &-heading {
+             @media(max-width:780px) {
+               font-size: 2rem !important;
+             }
+           
+           }
+           &-divider {
+            @media(max-width: 780px) {
+              width: 10rem !important;
+            }
+           }
+}

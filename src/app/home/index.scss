@@ -10,6 +10,10 @@
     padding-left: 5rem !important;
     padding-right: 5rem !important;
  }
+ @media(max-width: 380px) {
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+ }
  
 }
 .flex-container {

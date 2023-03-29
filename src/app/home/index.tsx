@@ -3,6 +3,7 @@ import './index.scss'
 import Homellis from '../../assets/img/homeills.png'
 import About from "../about"
 import Experience from "../experience"
+import Projects from "../projects"
 
 const Home:React.FC = () => {
     return(
@@ -34,6 +35,7 @@ const Home:React.FC = () => {
 
          <About />
          <Experience />
+         <Projects />
         </CustomContainer>
        
     )

@@ -5,9 +5,18 @@
     transition: all .2s;
     transform-origin: top;
     cursor: pointer;
+    @media(max-width: 780px) {
+        height: 100%;
+    }
    }
    .active {
     border-left: 3px solid rgb(228, 146, 245);
+    @media(max-width: 780px) {
+        
+        border-left:none;
+
+
+    }
     .tabs-item {
         color: rgb(240,196,248) !important;
 

@@ -1,6 +1,44 @@
+@import '/src/index.scss';
+.container{
+    @include respond(phone) {
+        margin-top: 5rem !important;
+    }
+}
 .tabs-container {
     border-left: 1px solid rgb(240,196,248) !important;
+    @media(max-width: 780px) {
+        flex-direction: row !important;
+        width:100%  !important;
+        border-top: 1px solid rgb(240,196,248) !important;
+        overflow-x: scroll;
+        border-left: none !important;
+        -ms-overflow-style: none;
+        scrollbar-width: none !important;
+        padding-left: 5rem !important;    
+        margin: 0 auto !important;
+        justify-content: center !important;
+
+    }
+    @media(max-width: 330px) {
+        padding-left: 10rem !important;
+    }
 }
 .outlet {
     padding-top: 2rem;
+}
+.tabs-wrapper {
+    @media(max-width: 800px) {
+        flex-direction: column !important;
+        gap: 5rem !important;
+    }
+}
+.expe-title {
+    @media (max-width:780px) {
+       font-size: 2.5rem !important;
+    }
+}
+.expe-text {
+    @media (max-width:780px) {
+        font-size: 1.5rem !important;
+     }
 }

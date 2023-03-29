@@ -65,8 +65,8 @@
       
     }
     @media(max-width: 420px) {
-      height: 30rem;
-      width: 30rem;
+      height: 30rem !important;
+      width: 30rem !important;
     }
   }
   &__img-wrapper {
@@ -101,6 +101,11 @@
   }
   
  } 
+ &-divider {
+  @media(max-width: 780px) {
+    width: 10rem !important;
+  }
+ }
  
  
 }
