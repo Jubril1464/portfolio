@@ -50,4 +50,5 @@ export interface StyleProps {
   shadow?: string;
   cursor?: string;
   borderWidth?: string;
+  minHeight?:string
 }

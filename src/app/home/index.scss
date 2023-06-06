@@ -7,12 +7,12 @@
     padding-right: 10rem !important;
  }
  @include respond(phone) {
-    padding-left: 5rem !important;
-    padding-right: 5rem !important;
+    padding-left: 4rem !important;
+    padding-right: 4rem !important;
  }
  @media(max-width: 380px) {
-    padding-left: 3rem !important;
-    padding-right: 3rem !important;
+    padding-left: 2.5rem !important;
+    padding-right: 2.5rem !important;
  }
  
 }
@@ -64,7 +64,7 @@
 }
 .hero-link {
     display: inline-block;
-    border: 1px solid rgb(240, 196, 248);
+    border: 2px solid rgb(240, 196, 248);
     border-radius: 10px;
     transition: all .2s;
     &:hover {

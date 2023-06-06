@@ -227,6 +227,7 @@ export const FlexColumn = styled.div<StyleProps>`
   flex-direction: column;
   gap: ${({ gap }) => `${gap}rem` || "0"};
   height: ${({ height }) => `${height}rem` || "auto"};
+  min-height: ${({ minHeight }) => `${minHeight}rem` || "auto"};
   justify-content: ${({ justifyContent }) => justifyContent || "center"};
   align-items: ${({ alignItems }) => alignItems || "center"};
   width: ${({ width }) => width || 100}%;

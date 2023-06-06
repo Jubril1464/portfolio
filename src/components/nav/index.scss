@@ -1,9 +1,10 @@
 @import '/src/index.scss';
 .nav-bar {
     font-family: 'Roboto Condensed', sans-serif;
-    position: fixed;
+    position: relative;
     width: 100%;
     z-index:10 ;
+    transition: all .2s;
 }
 .nav-container {
   @media(max-width: 830px) {
@@ -81,8 +82,8 @@
   .navigation__button {
     height: 7rem;
     width: 7rem;
-    position: fixed;
-    top: 4rem;
+    position: absolute;
+    top: 2rem;
     right: 1rem;
     border-radius: 50%;
     z-index: 4000;
@@ -142,3 +143,11 @@
   .active {
     display: flex;
   }
+  
+.show-nav {
+ position: fixed;
+
+}
+.show-bar{
+  position: fixed;
+}

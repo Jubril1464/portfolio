@@ -1,0 +1,39 @@
+@import '/src/index.scss';
+.sub-text {
+    font-family: $font-family-1;
+    font-style: italic;
+    @include respond(phone) {
+        font-size: 1.5rem !important;
+    }
+}
+.text-2 {
+    border-left: 1px solid rgb(228, 146, 245);
+    border-right: 1px solid rgb(228, 146, 245);
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+}
+.other-heading {
+    @include respond(phone) {
+        font-size: 2.5rem !important;
+    }
+}
+.other-cards {
+    transition: all .7s;
+    &:hover {
+        bottom: 1rem !important;
+    }
+    @media(max-width: 1500px) {
+        width: 40rem !important;
+    }
+}
+.other-cards-name {
+
+    @include respond(phone) {
+        font-size:3rem !important ;
+    }
+}
+.other-cards-description {
+    @include respond(phone) {
+        font-size:1.7rem !important ;
+    }
+}
