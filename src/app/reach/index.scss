@@ -23,7 +23,7 @@
     }
     &-description {
         &-span {
-            font-family: $font-family-1;
+            font-family: $font-family-2;
             font-style: italic;
             @include respond(phone) {
                 font-size:2rem !important ;
@@ -46,9 +46,10 @@
 .btn-hello {
     border: 2px solid rgb(228, 146, 245);
     border-radius: 1rem ;
-    transition: all .2s;
+    transition: all .5s !important;
     &:hover {
-     background: rgba(128, 128, 128, 0.355) !important;
+     background: rgb(228, 146, 245) !important;
+     color: #000 !important;
     }
     @include respond(phone) {
         font-size: 2rem !important;

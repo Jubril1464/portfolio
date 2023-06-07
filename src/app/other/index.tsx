@@ -1,7 +1,8 @@
 import { CustomContainer, AppText, FlexRow, FlexColumn } from "../../style";
 import Stack from "../../assets/svg/stack.svg";
 import "./index.scss";
-import { FiEdit } from "react-icons/fi";
+import { AiOutlineGithub } from "react-icons/ai";
+import { BiLinkExternal } from "react-icons/bi";
 import { projects } from "../../utils/utility";
 
 const Other = () => {
@@ -44,8 +45,7 @@ const Other = () => {
       </FlexRow>
 
       <FlexRow gap="3" topMargin="6" wrap="wrap">
-        {projects.map((item: any, index:number) => (
-         
+        {projects.map((item: any, index: number) => (
           <FlexColumn
             topPadding="2"
             bottomPadding="2"
@@ -60,35 +60,47 @@ const Other = () => {
             height="50"
             className="other-cards"
             key={index}
-            data-aos='zoom-in'
+            data-aos="zoom-in"
           >
             <FlexRow justifyContent="space-between">
-              <img src={Stack} alt="stack" height="30px" width="30px" />
+              <a href={item.github}>
+                <AiOutlineGithub size={30} color="rgb(240, 196, 248)" />
+              </a>
+              {/* <img src={Stack} alt="stack" height="30px" width="30px" /> */}
               <a href={item.link}>
-              <FiEdit size={30} color="rgb(240, 196, 248)" />
+                <BiLinkExternal size={30} color="rgb(240, 196, 248)" />
               </a>
             </FlexRow>
-            <AppText textSize="4" fontWeight="400" color="rgb(240, 196, 248)" className="other-cards-name">
+            <AppText
+              textSize="4"
+              fontWeight="400"
+              color="rgb(240, 196, 248)"
+              className="other-cards-name"
+            >
               {item.name}
             </AppText>
-            <AppText textSize="2.5" color="rgb(228, 146, 245)" fontWeight="300" className="other-cards-description">
+            <AppText
+              textSize="2.5"
+              color="rgb(228, 146, 245)"
+              fontWeight="300"
+              className="other-cards-description"
+            >
               {item.description}
             </AppText>
             <FlexRow justifyContent="flex-start" gap="2">
-              {item.tools.map((skills: any, index:number ) => 
+              {item.tools.map((skills: any, index: number) => (
                 <AppText
                   color="rgb(240, 196, 248)"
                   textSize="2.5"
                   fontWeight="400"
                   key={index}
+                  className="card-skills"
                 >
                   {skills}
                 </AppText>
-              )}
-             
+              ))}
             </FlexRow>
           </FlexColumn>
-
         ))}
       </FlexRow>
     </CustomContainer>

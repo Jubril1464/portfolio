@@ -7,12 +7,13 @@ import {
   FlexColumn,
 } from "../app-styles";
 import "./index.scss";
-import { FiEdit } from "react-icons/fi";
+import { BiLinkExternal } from "react-icons/bi";
+import { AiOutlineGithub } from "react-icons/ai";
 import HotRecipe from "../../assets/img/hotrecipe.png";
 import Symbiote from "../../assets/img/symbiote.png";
 const Projects: React.FC = () => {
   return (
-    <CustomContainer topMargin="10" bottomMargin="4">
+    <CustomContainer topMargin="10" bottomMargin="4" id="projects">
       <FlexRow justifyContent="flex-start" gap="2" bottomMargin="3">
         <AppText
           color="rgb(228, 146, 245)"
@@ -38,8 +39,8 @@ const Projects: React.FC = () => {
           className="projects-divider"
         ></CustomContainer>
       </FlexRow>
-      <FlexRow gap="3" className="projects-container" data-aos='zoom-in'>
-        <FlexColumn gap="2" width="30" alignItems="flex-start" >
+      <FlexRow gap="3" className="projects-container" data-aos="zoom-in">
+        <FlexColumn gap="2" width="30" alignItems="flex-start">
           <AppText
             color="rgb(240,196,248)"
             textSize="5"
@@ -68,7 +69,13 @@ const Projects: React.FC = () => {
               again! A Website for over 1,000,000 recipes.
             </AppText>
           </CustomContainer>
-          <FlexRow wrap="wrap" width="20" justifyContent="flex-start" gap="1" className="tools-wrapper">
+          <FlexRow
+            wrap="wrap"
+            width="20"
+            justifyContent="flex-start"
+            gap="1"
+            className="tools-wrapper"
+          >
             <AppText
               textSize="2.2"
               fontWeight="500"
@@ -93,20 +100,29 @@ const Projects: React.FC = () => {
             >
               Redux
             </AppText>
+            <a href="htpps://hot-recipe.netlify.com">
+              <BiLinkExternal
+                size={30}
+                color="rgb(240,196,248)"
+                className="edit-icon"
+              />
+            </a>
             <a href="https://github.com/Jubril1464/hot-recipe">
-            <FiEdit size={30} color="rgb(240,196,248)" className="edit-icon" />
+              <AiOutlineGithub
+                size={30}
+                color="rgb(240,196,248)"
+                className="edit-icon"
+              />
             </a>
           </FlexRow>
         </FlexColumn>
 
         <ImageWrapper height="50" width="80">
-          <a href="htpps://hot-recipe.netlify.com">
-            <img src={HotRecipe} alt="" width="100%" height="100%" />
-          </a>
+          <img src={HotRecipe} alt="" width="100%" height="100%" />
         </ImageWrapper>
       </FlexRow>
-      <FlexRow className="projects-container" topMargin="7" data-aos='zoom-in'>
-        <FlexColumn gap="2" width="30" alignItems="flex-start" >
+      <FlexRow className="projects-container" topMargin="7" data-aos="zoom-in">
+        <FlexColumn gap="2" width="30" alignItems="flex-start">
           <AppText
             color="rgb(240,196,248)"
             textSize="5"
@@ -135,7 +151,13 @@ const Projects: React.FC = () => {
               Jump in
             </AppText>
           </CustomContainer>
-          <FlexRow wrap="wrap" width="20" justifyContent="flex-start" gap="1" className="tools-wrapper">
+          <FlexRow
+            wrap="wrap"
+            width="20"
+            justifyContent="flex-start"
+            gap="1"
+            className="tools-wrapper"
+          >
             <AppText
               textSize="2.2"
               fontWeight="500"
@@ -176,15 +198,24 @@ const Projects: React.FC = () => {
             >
               Bootstrap
             </AppText>
+            <a href="https://symbiote-task.netlify.app/">
+              <BiLinkExternal
+                size={30}
+                color="rgb(240,196,248)"
+                className="edit-icon"
+              />
+            </a>
             <a href="https://github.com/Jubril1464/genesis-shards-task">
-            <FiEdit size={30} color="rgb(240,196,248)" className="edit-icon" />
+              <AiOutlineGithub
+                size={30}
+                color="rgb(240,196,248)"
+                className="edit-icon"
+              />
             </a>
           </FlexRow>
         </FlexColumn>
-        <ImageWrapper height="50" width="80" >
-          <a href="https://symbiote-task.netlify.app/">
+        <ImageWrapper height="50" width="80">
           <img src={Symbiote} alt="" width="100%" height="100%" />
-         </a>
         </ImageWrapper>
       </FlexRow>
     </CustomContainer>

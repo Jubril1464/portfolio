@@ -37,3 +37,9 @@
         font-size:1.7rem !important ;
     }
 }
+.card-skills {
+
+    @include respond(phone) {
+        font-size: 1.8rem !important;
+    }
+}

@@ -1,5 +1,6 @@
 $color-text: rgb(240, 196, 248);
-$font-family-1: 'Roboto Condensed', sans-serif;
+$font-family-1: 'Cedarville Cursive', cursive;
+$font-family-2 :  'Roboto Condensed', sans-serif;
 
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {

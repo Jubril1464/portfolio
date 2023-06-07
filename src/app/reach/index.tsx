@@ -2,14 +2,13 @@ import {
   AppLink,
   AppSpan,
   AppText,
-  CustomContainer,
   FlexColumn,
   ScreenTitle,
 } from "../app-styles";
 import "./index.scss";
 const Reach: React.FC = () => {
   return (
-    <FlexColumn className="reach" topMargin="15" gap="2" data-aos='zoom-in'>
+    <FlexColumn className="reach" topMargin="15" gap="2" data-aos='zoom-in' id="contact">
       <AppText
         color="rgb(228, 146, 245)"
         className="reach-title"
@@ -55,7 +54,7 @@ const Reach: React.FC = () => {
         and ~let's make the world a better place to live!
       </AppText>
 
-      <AppLink href="mailto:lukmanjubril2003@yahoo.com" borderColor="rgb(228, 146, 245)" decoration="none" textSize="3.5" fontWeight="300" color="rgb(240, 196, 248)" topPadding="1.2" leftPadding="2" rightPadding="2" bottomPadding="1.2" bottomMargin="2" className="btn-hello" topMargin="3">Say Hello</AppLink>
+      <AppLink href="mailto:lukmanjubril2003@yahoo.com" bgColor="rgb(228, 146, 245)" decoration="none" textSize="3" fontWeight="300" color="#fff" topPadding="1.2" leftPadding="2" rightPadding="2" bottomPadding="1.2" bottomMargin="2" className="btn-hello" topMargin="3">Say Hello</AppLink>
     </FlexColumn>
   );
 };
