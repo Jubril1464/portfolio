@@ -151,3 +151,11 @@
 .show-bar{
   position: fixed;
 }
+.img-wrapper {
+  height: 100px;
+  width: 100px;
+  img{
+    height: 100%;
+    width: 100%;
+  }
+}

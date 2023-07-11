@@ -11,9 +11,11 @@ import { BiLinkExternal } from "react-icons/bi";
 import { AiOutlineGithub } from "react-icons/ai";
 import HotRecipe from "../../assets/img/hotrecipe.png";
 import Symbiote from "../../assets/img/symbiote.png";
+import Virtuous from '../../assets/img/virtuous.png'
 const Projects: React.FC = () => {
   return (
     <CustomContainer topMargin="10" bottomMargin="4" id="projects">
+      
       <FlexRow justifyContent="flex-start" gap="2" bottomMargin="3">
         <AppText
           color="rgb(228, 146, 245)"
@@ -39,7 +41,90 @@ const Projects: React.FC = () => {
           className="projects-divider"
         ></CustomContainer>
       </FlexRow>
-      <FlexRow gap="3" className="projects-container" data-aos="zoom-in">
+
+      <FlexRow className="projects-container" topMargin="7" data-aos="zoom-in">
+        <FlexColumn gap="2" width="30" alignItems="flex-start" bottomMargin="2">
+          <AppText
+            color="rgb(240,196,248)"
+            textSize="5"
+            fontWeight="400"
+            className="projects-title"
+          >
+           Virtuous Sprouts
+          </AppText>
+          <CustomContainer
+            className="text-wrapper"
+            bgColor="rgb(50, 31, 86)"
+            topPadding="1.5"
+            leftPadding="1.5"
+            rightPadding="1.5"
+            bottomPadding="1.5"
+            width="50"
+            radius=".5"
+          >
+            <AppText
+              color="rgb(240,196,248)"
+              textSize="2"
+              fontWeight="400"
+              className="text-wrapper-text"
+            >
+             A Web Application used by Virtuous Sprouts for student resgistration and result portal
+            </AppText>
+          </CustomContainer>
+          <FlexRow
+            wrap="wrap"
+            width="20"
+            justifyContent="flex-start"
+            gap="1"
+            className="tools-wrapper"
+          >
+            <AppText
+              textSize="2.2"
+              fontWeight="500"
+              color="rgb(228, 146, 245)"
+              className="tools-text"
+            >
+              React
+            </AppText>
+            <AppText
+              textSize="2.2"
+              fontWeight="500"
+              color="rgb(228, 146, 245)"
+              className="tools-text"
+            >
+              SCSS
+            </AppText>
+            <AppText
+              textSize="2.2"
+              fontWeight="500"
+              color="rgb(228, 146, 245)"
+              className="tools-text"
+            >
+              Typescript
+            </AppText>
+           
+            
+            <a href="https://virtuoussprouts-new.netlify.app/">
+              <BiLinkExternal
+                size={30}
+                color="rgb(240,196,248)"
+                className="edit-icon"
+              />
+            </a>
+            <a>
+              <AiOutlineGithub
+                size={30}
+                color="rgb(240,196,248)"
+                className="edit-icon"
+              />
+            </a>
+          </FlexRow>
+        </FlexColumn>
+        <ImageWrapper height="50" width="80">
+          <img src={Virtuous} alt="" width="100%" height="100%" />
+        </ImageWrapper>
+      </FlexRow>
+      <FlexRow gap="3" className="projects-container" topMargin="7" data-aos="zoom-in">
         <FlexColumn gap="2" width="30" alignItems="flex-start">
           <AppText
             color="rgb(240,196,248)"
@@ -218,6 +303,8 @@ const Projects: React.FC = () => {
           <img src={Symbiote} alt="" width="100%" height="100%" />
         </ImageWrapper>
       </FlexRow>
+
+      
     </CustomContainer>
   );
 };

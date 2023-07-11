@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { AppLink, FlexRow, ScreenTitle } from "../../style";
+import { AppLink, FlexRow, ImageWrapper, ScreenTitle } from "../../style";
 import "./index.scss";
 import DownloadButton from "../download";
 import { useWindowScroll } from "../../hooks/useWindowScroll";
 import { Link } from "react-scroll";
+import Logo from '../../assets/img/logo.png'
 
 const Navigation: React.FC = () => {
   const [checked, setChecked] = useState(false);
@@ -25,14 +26,10 @@ const Navigation: React.FC = () => {
         className="nav-container"
         height="8"
       >
-        <ScreenTitle
-          textSize="5"
-          color="rgb(100, 255, 218)"
-          fontWeight="600"
-          className="nav-title"
-        >
-          Jubril
-        </ScreenTitle>
+        <div  className="img-wrapper">
+       <img src={Logo} alt="" />
+        </div>
+       
         <ul className={`nav-items ${checked && "active"}`}>
         <Link
               activeClass="activ"
