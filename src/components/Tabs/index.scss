@@ -14,13 +14,13 @@
         border-left: none !important;
         -ms-overflow-style: none;
         scrollbar-width: none !important;
-        padding-left: 5rem !important;    
+        padding-left: 15rem !important;    
         margin: 0 auto !important;
-        justify-content: center !important;
+        justify-content: center !important; 
 
     }
     @media(max-width: 330px) {
-        padding-left: 10rem !important;
+        padding-left: 18rem !important;
     }
 }
 .outlet {
