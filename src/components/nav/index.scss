@@ -151,9 +151,14 @@
 .show-bar{
   position: fixed;
 }
-.img-wrapper {
+.logo-wrapper {
   height: 100px;
   width: 100px;
+
+  @include respond(tab-land) {
+    height: 50px;
+    width: 50px;
+  }
   img{
     height: 100%;
     width: 100%;

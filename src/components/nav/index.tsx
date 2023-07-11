@@ -26,7 +26,7 @@ const Navigation: React.FC = () => {
         className="nav-container"
         height="8"
       >
-        <div  className="img-wrapper">
+        <div  className="logo-wrapper">
        <img src={Logo} alt="" />
         </div>
        
